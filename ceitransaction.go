@@ -1,6 +1,7 @@
-package cei-api
+package ceiapi
 
 import (
+	"fmt"
 	"time"
 )
 
@@ -19,16 +20,20 @@ type CeiTransaction struct {
 }
 
 type CeiTransactions struct {
-	Entries         []CeiTransaction
-	Months            CeiTransactionMonth
+	Entries []CeiTransaction
+	Months  CeiTransactionMonth
 }
 
 type CeiTransactionMonth struct {
-	Categories                  []string
-	CeiTransactionMonthSeries   []CeiTransactionMonthSeries
+	Categories                []string
+	CeiTransactionMonthSeries []CeiTransactionMonthSeries
 }
 
 type CeiTransactionMonthSeries struct {
-	Name         string
-	Data         []float32
+	Name string
+	Data []float32
+}
+
+func New() {
+	fmt.Println("r1")
 }
