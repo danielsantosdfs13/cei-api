@@ -1,4 +1,4 @@
-package ceitransaction
+package cei-api
 
 import (
 	"time"
@@ -16,4 +16,19 @@ type CeiTransaction struct {
 	Price           float32
 	TotalValue      float32
 	QuotationFactor int
+}
+
+type CeiTransactions struct {
+	Entries         []CeiTransaction
+	Months            CeiTransactionMonth
+}
+
+type CeiTransactionMonth struct {
+	Categories                  []string
+	CeiTransactionMonthSeries   []CeiTransactionMonthSeries
+}
+
+type CeiTransactionMonthSeries struct {
+	Name         string
+	Data         []float32
 }
