@@ -1,4 +1,4 @@
-package ceiapi
+package ceiutils
 
 import (
 	"fmt"
